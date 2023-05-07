@@ -10,9 +10,11 @@ Test the application: `./gradlew test` (success, exit code: 0; error, exit code 
 
 The application requires access to a Postgres database.
 
-The application can be run with command: `java -jar ./build/libs/sample-project-0.0.1-SNAPSHOT.jar --database.url=jdbc:postgresql://localhost:5432/public  --database.username=user --database.password=password`
+The docker image for this application is already pushed to divyankgupta/mindtickle-project repository on dockerhub.
 
-You can also run the application by providing the follow environment variables instead of using the arguments:
+You can run the application along with opentelemetry collector, grafana tempo and grafana by using the docker-compose.yaml.
+
+Run the application: `docker compose up`, but before running the application update the bewlo mwntion environment variables in docker-compose.yaml:
 - `DATABASE_URL` (example: `DATABASE_URL=jdbc:postgresql://localhost:5432/public`)
 - `DATABASE_USERNAME` (example: `DATABASE_USERNAME=user`)
 - `DATABASE_PASSWORD` (example: `DATABASE_PASSWORD=password`)
@@ -28,3 +30,5 @@ If the app cannot successfully connect to Postgres, it will return:
 ```json
 {"status":"KO","message":"Sample application is NOT working with database. Check logs.."}
 ```
+
+Also the traces can be reviewed on grafana using tempo datasource on http://localhost:3000
