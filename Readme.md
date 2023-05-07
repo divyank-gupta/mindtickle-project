@@ -10,7 +10,8 @@ Test the application: `./gradlew test` (success, exit code: 0; error, exit code 
 
 The application requires access to a Postgres database.
 
-The docker image for this application is already pushed to divyankgupta/mindtickle-project repository on dockerhub.
+In the Dockerfile, an OpenTelemetry agent for Java has been included to facilitate automatic instrumentation.
+The Docker image for this application has already been pushed to the divyankgupta/mindtickle-project repository on DockerHub.
 
 You can run the application along with opentelemetry collector, grafana tempo and grafana by using the docker-compose.yaml.
 
