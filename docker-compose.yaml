@@ -4,7 +4,7 @@ services:
 
   check-db-app:
     build: .
-    image: divyankgupta/mindtickle-project:latest
+    image: divyankgupta/mindtickle-project:v1
     container_name: mindtickle-project
     hostname: mindtickle-project
     depends_on:
