@@ -15,16 +15,19 @@ The Docker image for this application has already been pushed to the divyankgupt
 
 You can run the application along with opentelemetry collector, grafana tempo and grafana by using the docker-compose.yaml.
 
-Run the application: `docker compose up`, but before running the application update the bewlo mwntion environment variables in docker-compose.yaml:
+Run the application: `docker compose up`, but before running the application update the below mentioned environment variables in docker-compose.yaml:
 - `DATABASE_URL` (example: `DATABASE_URL=jdbc:postgresql://localhost:5432/public`)
 - `DATABASE_USERNAME` (example: `DATABASE_USERNAME=user`)
 - `DATABASE_PASSWORD` (example: `DATABASE_PASSWORD=password`)
+
+![docker_containers](https://user-images.githubusercontent.com/58252729/236701334-98d0f3d6-c764-4d81-9d0c-d419502cda07.png)
 
 The application can be accessed at http://localhost:8080/check-database. It will return a JSON payload. If the app can connect successfully to Postgres, it will return:
 
 ```json
 {"status":"OK","message":"Sample application is working with database"}
 ```
+![check-database](https://user-images.githubusercontent.com/58252729/236701489-caf9ed75-4733-4b1c-9d1f-9557d557c6aa.png)
 
 If the app cannot successfully connect to Postgres, it will return:
 
