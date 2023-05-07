@@ -31,4 +31,7 @@ If the app cannot successfully connect to Postgres, it will return:
 {"status":"KO","message":"Sample application is NOT working with database. Check logs.."}
 ```
 
-Also the traces can be reviewed on grafana using tempo datasource on http://localhost:3000
+Also the traces can be viewed on grafana using tempo datasource on http://localhost:3000
+
+![trace_grafana](https://user-images.githubusercontent.com/58252729/236699903-396fef58-9a7c-4d95-aa21-abc795092767.png)
+
